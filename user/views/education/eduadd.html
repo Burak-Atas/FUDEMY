@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="/user/asset/css/aduadd.css">
+</head>
+
+<body>
+    <section id="edu">
+        <nav>
+            <div class="logo">
+             <h2>   FUDEMY</h2>
+            </div>
+            <ul>
+                <li>
+                    <a href="/">Ana Sayfa</a>
+                </li>
+                <li>
+                    <a href="#education">Eğitim</a>
+                </li>
+                <li>
+                    <a href="/blog">Blog</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+            </ul>
+            <div class="profil">
+                <a href="">isim soyisim</a>
+            </div>
+        </nav>
+        
+        <div class="head">
+            <h1>KURS EKLE</h1>
+        </div>
+    </section>
+    <div class="kursekle">
+        <form action="/edu/addedu">
+            <div class="f">
+                <label for="title">Title : </label>
+                <input type="text" name="title" placeholder="title">
+            </div>
+            <div class="f">
+                <label for="content">Content :</label>
+                <input type="text" name="content" placeholder="content">
+            </div>
+            <div class="f">
+                <input type="text" name="category" value="databases" style="display: none;">
+            </div>
+            <div class="f">   
+               <label for="video">video  :</label>
+                <!-- Tüm video dosyalarını gösterir (video/*) -->
+                <input type="file" accept="video/*" name="video">
+            </div>
+            <div class="f">
+                <label for="content">Content :</label>
+                <input type="text" name="content" placeholder="content">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

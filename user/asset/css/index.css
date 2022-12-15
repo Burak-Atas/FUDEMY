@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/*
+
+*/
+
+#header {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7)50%, rgba(0, 0, 0, 0.7)50%), url(/user/asset/image/headerhacker.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container {
+    padding: 30px 60px;
+    width: 100%;
+}
+
+#header .head {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#header .logo {
+    width: 30%;
+    color: #FF0000;
+    display: inline-block;
+}
+
+#header .logo h3 {
+    border-bottom: 3px solid #EEEEEE;
+    border-radius: 100%;
+    font-size: 24px
+}
+
+#header nav {
+    width: 60%;
+    text-align: center;
+    font-weight: bold;
+}
+
+#header nav ul {
+    display: flex;
+}
+
+#header nav ul li {
+    padding: 5px 18px;
+}
+
+#header nav ul a {
+    color: #EEEEEE;
+    font-size: 20px;
+}
+
+#header nav ul a:hover {
+    border-bottom: 3px solid #CEDDEF;
+    transition: 0.6s;
+    color: #FFCD38
+}
+
+#header .signup {
+    width: 19%;
+    display: block;
+}
+
+#header .signup a {
+    border: 1px solid white;
+    color: #EEEEEE;
+    padding: 5px
+}
+
+#header .content {
+    margin-top: 127px;
+}
+
+#header .content .row {
+    display: flex;
+}
+
+#header .col-2 {
+    width: 50%;
+}
+
+#header .content .row h1 {
+    color: #EEEEEE;
+    font-size: 50px
+}
+
+#header .content .row span {
+    color: #FF0000;
+}
+
+#header .content .row p {
+    margin-top: 15px;
+    color: #EEEEEE;
+}
+
+.form {
+    float: right;
+    margin-right: 150px;
+    width: 250px;
+    height: 380px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8)50%, rgba(0, 0, 0, 0.8)50%);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+@media screen and (min-width:1048px) {
+    #header nav {
+        margin-left: 140px;
+    }
+    #header nav ul a {
+        color: #EEEEEE;
+        font-size: 22px;
+    }
+    #header nav ul li {
+        padding: 5px 28px;
+    }
+    #header .content {
+        margin-left: 80px;
+    }
+}
+
+
+/*  
+    -->>> SECTİON EDUCATİON
+*/
+
+#education {
+    height: 100vh;
+    background-image: url(/user/asset/image/educationback.jpg);
+}
+
+#education .container {
+    padding: 100px;
+}
+
+#education .edu {
+    display: flex;
+}
+
+#education .edu .box {
+    width: 30%;
+    border: 3px solid white;
+    margin-left: 50px;
+    height: 400px;
+    background-color: blue;
+}
+
+#education .backimage-1 {
+    background-image: url(/user/asset/image/veritabanı.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+#education .backimage-2 {
+    background-image: url(/user/asset/image/backend.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+#education .backimage-3 {
+    background-image: url(/user/asset/image/hacker.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+#education .box h5 {
+    color: #EEEEEE;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#education .ent {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#education .ent h2 {
+    font-size: 50px;
+    color: #EEEEEE
+}
+
+#education .ent span {
+    color: #FF0000;
+}
+
+
+/*
+    ABPUT SECTİON
+*/
+
+#about .item_h1 {
+    font-size: 50px;
+    text-align: center;
+    padding: 40px 0;
+}
+
+#about .about {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#about .explanation {
+    width: 50%;
+    margin-left: 150px;
+}
+
+#about .image {
+    width: 50%;
+    text-align: center;
+}
+
+#about img {
+    width: 280px;
+}
+
+#about .container {
+    height: 100vh;
+}
+
+#about span {
+    color: #FF0000;
+}
+
+
+/*
+FOOTER SECTİON
+*/
+
+#footer {
+    background-color: #041562;
+}
+
+#footer .footer {
+    display: flex;
+    align-items: center;
+}
+
+#footer .sosyalbutonlar {
+    margin-top: 50px;
+    display: inline-block;
+    position: relative;
+    left: 200px;
+}
+
+#footer .sosyalbutonlar a {
+    background: #a1a1a1;
+    text-decoration: none;
+    color: #FFF;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    border-radius: 10px;
+    margin-right: 20px;
+    font-size: 30px;
+    overflow: hidden;
+    position: relative;
+    line-height: 60px;
+    text-align: center;
+}
+
+#footer .fastetlink ul {
+    display: flex;
+}
+
+#footer .fastetlink ul a {
+    color: #FF0000;
+}
+
+#footer .sosyalbutonlar a {
+    transition: transform 0.4s linear 0s, border-top-left-radius 0.1s linear 0s, border-top-right-radius 0.1s linear 0.1s, border-bottom-right-radius 0.1s linear 0.2s, border-bottom-left-radius 0.1s linear 0.3s;
+}
+
+#footer .footer .contact {
+    color: #EEEEEE
+}
+
+#footer .sosyalbutonlar .twitter:hover {
+    background-color: #00aced;
+    transform: rotate(360deg);
+    border-radius: 50%;
+}
+
+#footer .sosyalbutonlar .instagram:hover {
+    background-color: #bc2a8d;
+    transform: rotate(360deg);
+    border-radius: 50%;
+}
+
+#footer .sosyalbutonlar .linkedin:hover {
+    background-color: #00aced;
+    transform: rotate(360deg);
+    border-radius: 50%;
+}
