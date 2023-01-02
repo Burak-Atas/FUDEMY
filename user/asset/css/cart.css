@@ -1,0 +1,30 @@
+.cardcontainer{
+    margin: 40px;
+}
+
+.boxcard{
+    border: 1px solid red;
+}
+
+
+.card-ex{
+ margin-top: 40px;
+    width: 100%;
+}
+
+.card-flex{
+    display: flex;
+    margin: 30px;
+}
+
+.cardactive {
+width: 50%;
+text-align: center;
+}
+.cardactive input{
+    margin-top: 20px;
+}
+
+.mycard{
+    margin-left: 80px;
+}

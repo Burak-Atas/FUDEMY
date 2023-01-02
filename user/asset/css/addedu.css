@@ -1,0 +1,25 @@
+#edukurs{
+margin-top:30px ;
+}
+
+#edukurs input,textarea{
+    border-radius: 6px;
+}
+
+.sumbit{
+    text-align: center;
+    
+}
+
+.video{
+    margin-left: 100px;
+}
+
+#edukurs {
+    display: flex;
+justify-content: space-around;}
+
+.h1{
+    margin-bottom: 30px; 
+    text-align: center;
+}

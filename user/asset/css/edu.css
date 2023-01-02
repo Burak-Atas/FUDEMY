@@ -1,0 +1,95 @@
+.edusepet a{
+    padding: 12px;
+    border: 1px solid gray;
+    background-color: aqua;
+    margin-top: 16px;
+    margin-left: -430px;
+}
+
+.edusepet a:hover{
+    background-color: blue;
+    color: white;
+}
+
+
+#edukurs{
+    margin-top: 50px;
+    margin-left: 50px;
+
+    display: flex
+}
+
+#edukurs ul{
+    width: 70%;
+}
+
+#edukurs li{
+    padding:30px;
+    border: 1px solid gray;
+    margin: 30px 0px;
+}
+
+
+.aciklama{
+    width: 23%;
+    margin-left: 5%;
+    margin-top: 20px;
+    padding: 10px ppx;
+    border: 1px solid  gray;
+}
+
+.aciklama .edusepet 
+
+.aciklama img{
+    margin: 30px;
+    width: 240px;
+}
+
+
+.comments {
+    display: flex;
+    margin-top: 40px;
+}
+
+.yorum{
+    margin-left:80px
+}
+
+.yorumlar h5{
+    font-size: 18px;
+    color: red;
+    margin-bottom: 20px;
+}
+.yorumlar{
+    margin-left:40px;
+    margin-top: 10px;
+    width: 40%;
+}
+
+.commentcard{
+    margin-top: 40px;
+}
+
+
+.line{
+    margin-top: 30px;
+    border-top:5px solid gray;
+}
+
+.col-2 a{
+    font-size: 58px;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+
+.aciklama {
+    text-align: center;
+}
+
+.aciklama h3{
+    font-size: 25px;
+    color: black;
+    text-align: center;
+}
