@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Name}}</title>
+
+    <link rel="stylesheet" href="/user/asset/css/index.css">
+    <link rel="stylesheet" href="/user/asset/css/cart.css">
+</head>
+
+
+<body>
+    <section id="header" style="height: 50vh;">
+        <div class="container">
+            <div class="head">
+                <div class="logo">
+                    <div class="l">
+                        <h3>FUDEMY</h3>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/" onclick="cookie()">Ana Sayfa</a>
+                        </li>
+                        <li>
+                            <a href="/">Eğitim</a>
+                        </li>
+                        <li>
+                            <a href="/about">About</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="name">
+                    <ul>                      
+                          <li><a href="#Ders">{{.Name}}</a>
+                              <ul>
+                                  <li><a href="/mycourse">Kurslarım</a></li>
+                                  <li><a href="/addcourse">kurs ekle</a></li>                     
+                                  <li><a href="/mycard">kartlarım</a></li>
+                                  <li><a href="/exit">çikis</a></li>      
+
+                              </ul>
+                          </li>                      
+                    </ul>
+              </div>
+            </div>
+            <div class="content">
+                <div class="row">
+                    <div class="col-2">
+                        <h1>KART İŞLEMLERİ</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="card-ex">
+ 
+        <div class="card-flex">
+            <div class="cardactive">
+                <div class="card-wrapper">
+                    <h2>Kart eklemek için aşşağıdaki alanları doldurun</h2>
+                </div>  
+                <form action="/addcard" method="POST">
+                    <input placeholder="Kredi Kartı Numarası" type="tel" name="cardnumber">
+                    <br><input placeholder="Ad Soyad" type="text" name="name">
+                    <br><input placeholder="CVC" type="number" name="cvc">
+                    <br> <input type="submit" value="Kaydet">
+                </form>
+            </div>
+            <div class="cartlarim">
+                <div class="mycard">
+                    <h2>Kartlarım</h2>
+                    {{with .Cart}}
+                        {{range .}}
+                            <div class="box">
+                                <p>{{.Name}}</p>
+                                <p>{{.Cardnumber}}</p>
+                                <p>{{.Csv}}</p>
+                                <form action="/removeitem" method="post" >
+                                    <input type="text" value="{{.Cardnumber}}" name="cardnumber" style="display: none;"> 
+                                    <input type="submit" value="kartı sil">
+                                </form>
+                            </div>
+                        {{end}}
+                    {{end}}
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

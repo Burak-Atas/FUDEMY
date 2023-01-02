@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Fudemy</title>
+
+    <link rel="stylesheet" href="/user/asset/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/user/asset/css/addedu.css">
+</head>
+
+
+<body>
+
+    <section id="header">
+        <div class="container">
+            <div class="head">
+                <div class="logo">
+                    <div class="l">
+                        <h3>FUDEMY</h3>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/" onclick="cookie()">Ana Sayfa</a>
+                        </li>
+                        <li>
+                            <a href="/">Eğitim</a>
+                        </li>
+                        <li>
+                            <a href="/about">About</a>
+                        </li>
+                        <li>
+                            <a href="/order">sepet</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="signup">
+                    <a href="/login">login/signup</a>
+                </div>
+                <div class="name">
+                      <ul>                      
+                            <li><a href="#Ders">{{.Name}}</a>
+                                <ul>
+                                    <li><a href="/mycourse">Kurslarım</a></li>
+                                    <li><a href="/addcourse">kurs ekle</a></li>                     
+                                    <li><a href="/mycard">kartlarım</a></li>
+                                    <li><a href="/exit">çikis</a></li>      
+
+                                </ul>
+                            </li>                      
+                      </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div class="row">
+                    <div class="col-2">
+                        <h1> <span>PRO</span>JELER & <span>ALGO</span>RİTMA<br>GEL<span>İŞTİ</span>RME <br><span> KURS</span>LARI</h1>
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consequuntur obcaecati veniam nostrum incidunt, illo eos, aperiam dolorem distinctio, laudantium harum recusandae? Iste facere fuga laudantium itaque mollitia ab
+                            exercitationem?
+                        </P>
+                    </div>
+                    <div class="col-2">
+                        <div class="form"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <div style="content: '';clear:both"></div>
+    
+    
+    <section id="education">
+        <div class="h1">
+            <h1><span>KURS</span>LA<span>RIM</span>IZ</h1>
+        </div>
+        <div class="row">
+            <div class="col2-left">
+                <div class="h4">
+                    <h4>Filtre</h4>
+                </div>
+                <div class="filtre">
+                    <div class="search">
+                        <input type="text" name="search" placeholder="search">
+                        <input type="button" value="ara">
+                    </div>
+                    <div class="rodiobutton">
+                        <ul>
+                            <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="html">HTML</label><br>
+                            <input type="radio" id="css" name="fav_language" value="CSS">
+                            <label for="css">CSS</label><br>
+                            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                            <label for="javascript">JavaScript</label>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col2-right">
+                {{with .Product}}
+                       {{range .}}
+                     <div class="card">
+                            <div class="image">
+                                <img src="/user/asset/image/hacker.jpg" alt="">
+                         </div>
+                        <div class="title">
+                            <h5>Title: <span>{{.Title}}</span></h5>
+                        </div>
+                        <div class="fiyat">
+                            <p>fiyat: {{.Price}}</p>
+                        </div>
+                        <div class="sepeteekle">
+                            <form action="/course" method="post">
+                              <input type="text" name="id"value="{{.ProductId}}" style="display:none;">
+                              <input type="submit" value="Detaylar">
+                            </form>
+                         </div>
+                </div>
+                     {{end}}
+                {{end}}
+
+                
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="footer">
+        <div class="container">
+            <div class="footer">
+                <div class="contact">
+                    <ul>
+                        <li>
+                            MAİL
+                            <ol>
+                                <li>softwareburak02@gmail.com</li>
+                                <li>batas219@gmail.com</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fastetlink">
+                    <ul>
+                        <li>
+                            <a href="#">Ana Sayfa</a>
+                        </li>
+                        <li>
+                            <a href="#">Eğitim</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="socialmedia">
+                    <div class="sosyalbutonlar">
+                        <a href="http://twitter.com/cahitsoyman.blogspot.com" target="_blank" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="http://instagram.com//cahitsoyman.blogspot.com" target="_blank" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="http://linkedin.com//cahitsoyman.blogspot.com" target="_blank" class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <script src="/user/asset/js/index.js"></script>
+</body>
+
+</html>

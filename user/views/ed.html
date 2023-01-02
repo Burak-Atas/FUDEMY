@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Name}}</title>
+
+    <link rel="stylesheet" href="/user/asset/css/index.css">
+    <link rel="stylesheet" href="/user/asset/css/edu.css">
+
+</head>
+
+
+<body>
+    <section id="header" style="height: 50vh;">
+        <div class="container">
+            <div class="head">
+                <div class="logo">
+                    <div class="l">
+                        <h3>FUDEMY</h3>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/" onclick="cookie()">Ana Sayfa</a>
+                        </li>
+                        <li>
+                            <a href="/">Eğitim</a>
+                        </li>
+                        <li>
+                            <a href="/about">About</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="name">
+                    <ul>                      
+                          <li><a href="#">{{.Name}}</a>
+                              <ul>
+                                  <li><a href="/mycourse">Kurslarım</a></li>
+                                  <li><a href="/addcourse">kurs ekle</a></li>                     
+                                  <li><a href="/mycard">kartlarım</a></li>
+                                  <li><a href="/exit">çikis</a></li>      
+
+                              </ul>
+                          </li>                      
+                    </ul>
+              </div>
+            </div>
+            <div class="content">
+                <div class="row">
+                    <div class="col-2">
+                             <li><a href="/edu/eduvideo">{{.Product_name}}</a></li>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="edukurs">
+        <ul>
+            {{with .Video}}
+                {{range .}}
+                <form action="/edu/eduvideo">     
+                <li>{{.VideoTitle}}
+                    <input type="text" value="{{.VideoId}}" name="id" style="display: none;">
+                    <input type="submit" value="videoDetayları">
+                </li>
+                </form>
+                {{end}}
+            {{end}}
+        </ul>
+       
+        <div class="aciklama" style="display:grid;">
+            <h3>{{.Product_name}}</h3>
+            <br><br>
+            <p>{{.Details}}</p>
+            <div class="edusepet">
+            <form action="/order" method="post">
+                <input type="text" value="{{.Eduid}}" name="id" style="display: none;">
+                <input type="submit" value="sepete_ekle"></form>
+            </div>
+        </div>
+    </section>
+
+    <div class="line">
+
+    </div>
+
+
+
+
+
+<div class="comments">
+    <div class="yorum">
+        <form action="/addcomment" method="post">
+           <p style="color: red;">{{.Name}}:</p> olarak yorum yapmak ister misin?
+            <br><br>
+            <input type="text" value="{{.Eduid}}" name="eduid" style="display: none;">
+            <textarea name="yorum" placeholder="yorumunuz" id="" cols="30" rows="8"></textarea>
+            <input type="submit" value="yorum ekle">
+        </form>
+    </div>
+    <div class="yorumlar">
+        {{with .Yorumlar}}
+            {{range .}}
+                <div class="commentcard">
+                    <h5>{{.Gname}}</h5>
+                    <p>{{.CommentDetails}}</p>
+                </div>
+            {{end}}
+        {{end}}
+
+    </div>
+</div>
+</body>
+
+</html>
